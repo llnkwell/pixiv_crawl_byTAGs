@@ -63,7 +63,7 @@ if __name__ == '__main__':
     dl_df['url'] = ill_info['url']
     dl_df['xRestrict'] = ill_info['xRestrict']
     dl_df['pageCount'] = ill_info['pageCount']
-    dl_df = dl_df[dl_df['xRestrict'] == 0]
+    dl_df = dl_df[dl_df['xRestrict'] == 0]  # 是否保留R18内容，若保留则需要提供打开相关选项的账号cookie
     dl_df = dl_df.drop('xRestrict', axis=1)
 
     direct_list = get_url(dl_df)

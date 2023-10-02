@@ -1,7 +1,6 @@
-**同文件夹目录中cookie.txt粘贴个人账号cookie
-**代理端口自行设置
-**进行图片下载前需要补充json.csv表头
+爬虫提供pixiv网页端按照标签搜索结果的图片下载功能
 
-,id,title,illustType,xRestrict,restrict,sl,url,description,tags,userId,userName,width,height,pageCount,isBookmarkable,bookmarkData,alt,titleCaptionTranslation,createDate,updateDate,isUnlisted,isMasked,aiType,profileImageUrl
+可以用目标tag加上其他收藏量tag（如：5000users入り等）搭配得到经过过滤的图片
+但是由于tag是用户和画师可以自选的，所以这个方法爬取漏图难以避免，同时可能下载到少量差图（部分画师自行打上收藏量相关的标签）
 
-运行顺序 get_json.py -> dl_img.py 
+当然开了pixiv会员的账号可以在获取json时自行筛选所有符合收藏量的作品
